@@ -9,7 +9,7 @@ let photosArray = [];
 
 
 function savedata(){
-  localStorage.setItem("search", $('#search').val());
+  sessionStorage.setItem("search", $('#search').val());
 }
 
 document.getElementById("search").value = getSavedValue(); 
@@ -17,10 +17,10 @@ document.getElementById("search").value = getSavedValue();
 queryPass=document.getElementById("search").value;
 
 function getSavedValue  (){
-  if (!localStorage.getItem("search")) {
+  if (!sessionStorage.getItem("search")) {
       return "";// You can change this to your defualt value. 
   }
-  return localStorage.getItem("search");
+  return sessionStorage.getItem("search");
 }
 
 
